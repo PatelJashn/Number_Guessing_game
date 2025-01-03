@@ -1,25 +1,25 @@
 let running = true;
 let max = 100;
 let min = 0;
-const banana = Math.floor(Math.random() * (max - min + 1) + min);
+const chosennumb = Math.floor(Math.random() * (max - min + 1) + min);
 tries = 0
 while (running) {
-    let poop = window.prompt("Enter the number");
+    let num = window.prompt("Enter the number");
     
-    if (poop > 100 || poop < 0) {
-        window.alert("u dumbass read");
-    } else if (isNaN(poop)) {
-        window.alert("This aint a number blud");
+    if (num > 100 || num < 0) {
+        window.alert("Only enter number from 1 to 100");
+    } else if (isNaN(num)) {
+        window.alert("This isnt a Number");
     } else {
         tries++
-        poop = Number(poop);
+        num = Number(num);
         
-        if (poop > banana) {
-            window.alert("too big blud");
-        } else if (poop < banana) {  // Corrected here
-            window.alert("too smol blud");
+        if (num > chosennumb) {
+            window.alert("Number is too big");
+        } else if (num < chosennumb) {  
+            window.alert("Number is too small");
         } else {
-            window.alert(`good job blue and you took ${tries} tries`);
+            window.alert(`You have chosen correct number and you took ${tries} tries`);
             running = false;
         }
     }
